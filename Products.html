@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products – PharmAlg</title>
+
+  <!-- Stylesheets ------------------------------------------------------------------------------------------------------------>
+  <link rel="stylesheet" href="PharmAlg.css" />
+</head>
+<body>
+
+  <!-- Header --------------------------------------------------------------------------------------------------------->
+  <header class="sticky-nav">
+    <nav>
+      <div class="logo">PharmAlg</div>
+      <div class="nav-links">
+        <a href="PharmAlg.html#home-section">Home</a>
+        <a href="products.html">Products</a>
+        <a href="PharmAlg.html#consult-section">Consult</a>
+        <a href="#" id="track-order-link">Track Order</a>
+        <button id="open-login" class="hero-button hero-button-primary">Login</button>
+      </div>
+    </nav>
+  </header>
+<!-- Products Header Section with Image Background and Text Overlay ------------------------------------------------------------------------>
+<section id="products-section" class="products-header fade-in-section">
+  <div class="products-header-overlay">
+    <div class="products-header-text">
+      <h1>
+        <span style="background: linear-gradient(to right, #2b6cb0, #38b2ac); -webkit-background-clip: text; color: transparent;">
+          Discover Our Products
+        </span>
+      </h1>
+      <p>
+        Reliable. Affordable. Trusted.<br />
+        Same-day delivery with safe, cool packaging.<br />
+        Earn rewards for staying healthy.<br />
+        Eco-friendly meds: reusable packs, drug returns, and carbon-neutral shipping.
+      </p>
+    </div>
+  </div>
+</section>
+
+</section>
+
+
+  <!-- Products Section --------------------------------------------------------------------------------------------------------->
+<section id="products-section" class="fade-in-section">
+    <div class="container">
+      <div class="products-grid" data-aos="fade-up" data-aos-delay="100">
+  
+        <!-- Product 1 -->
+        <div class="product-card">
+          <img src="Assets/Paracetamol.jpg" alt="Paracetamol 500mg" />
+          <h3>Paracetamol 500mg</h3>
+          <p class="product-desc">Pain relief and fever reducer. Trusted and effective.</p>
+          <p class="price"> 150 DA </p>
+          <button class="hero-button hero-button-primary">Add to Cart</button>
+        </div>
+  
+        <!-- Product 2 -->
+        <div class="product-card">
+          <img src="Assets/Ibuprofen.png" alt="Ibuprofen 400mg" />
+          <h3>Ibuprofen 400mg</h3>
+          <p class="product-desc">Relieves pain, inflammation, and swelling fast.</p>
+          <p class="price"> 220 DA </p>
+          <button class="hero-button hero-button-primary">Add to Cart</button>
+        </div>
+  
+        <!-- Product 3 -->
+        <div class="product-card">
+          <img src="Assets/Vitamin C.png" alt="Vitamin C Tablets" />
+          <h3>Vitamin C Tablets</h3>
+          <p class="product-desc">Boost immunity with high-dose vitamin C chewables.</p>
+          <p class="price"> 300 DA </p>
+          <button class="hero-button hero-button-primary">Add to Cart</button>
+        </div>
+  
+        <!-- Product 4 -->
+        <div class="product-card">
+          <img src="Assets/Travel Ease.png" alt="Travel Kit" />
+          <h3>Travel Kit</h3>
+          <p class="product-desc">All-in-one travel medicine essentials kit.</p>
+          <p class="price"> 800 DA </p>
+          <button class="hero-button hero-button-primary">Add to Cart</button>
+        </div>
+        <!-- Product 5 -->
+        <div class="product-card">
+          <img src="Assets/Allergy.jpg" alt="Allergy Relief" />
+          <h3>Allergy Relief</h3>
+          <p class="product-desc">Fast relief from allergy symptoms.</p>
+          <p class="price"> 160 DA </p>
+          <button class="hero-button hero-button-primary">Add to Cart</button>
+        </div>
+        
+        <!-- Product 6 -->
+        <div class="product-card">
+          <img src="Assets/Cough.jpg" alt="Cough Syrup" />
+          <h3>Cough Syrup</h3>
+          <p class="product-desc">Soothes dry and wet coughs.</p>
+          <p class="price"> 350 DA </p>
+          <button class="hero-button hero-button-primary">Add to Cart</button>
+        </div>
+        
+        <!-- Product 7 -->
+        <div class="product-card">
+          <img src="Assets/Antacids.jpg" alt="Antacid Tablets" />
+          <h3>Antacid Tablets</h3>
+          <p class="product-desc">Relieves heartburn and indigestion.</p>
+          <p class="price"> 150 DA </p>
+          <button class="hero-button hero-button-primary">Add to Cart</button>
+        </div>
+        
+        <!-- Product 8 -->
+        <div class="product-card">
+          <img src="Assets/NasalSpray.jpg" alt="Nasal Spray" />
+          <h3>Nasal Spray</h3>
+          <p class="product-desc">Unblocks nasal congestion fast.</p>
+          <p class="price"> 450 DA </p>
+          <button class="hero-button hero-button-primary">Add to Cart</button>
+        </div>
+        
+        <!-- Product 9 -->
+        <div class="product-card">
+          <img src="Assets/HandSanitizer.jpg" alt="Hand Sanitizer" />
+          <h3>Hand Sanitizer</h3>
+          <p class="product-desc">Kills 99.9% of germs instantly.</p>
+          <p class="price"> 1000 DA </p>
+          <button class="hero-button hero-button-primary">Add to Cart</button>
+  
+      </div>
+    </div>
+  </section>
+  
+<!-- Footer --------------------------------------------------------------------------------------------------------->
+  <footer class="fade-in-section">
+    <div class="footer-content">
+      <p>&copy; 2025 PharmAlg. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts --------------------------------------------------------------------------------------------------------->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="PharmAlg.js"></script>
+
+  <!-- Modal Toggle --------------------------------------------------------------------------------------------------------->
+  <script>
+    document.getElementById('track-order-link')?.addEventListener('click', function (e) {
+      e.preventDefault();
+      const modal = document.getElementById('trackingModal');
+      if (modal) modal.style.display = 'flex';
+    });
+
+    document.querySelector('.close-modal')?.addEventListener('click', function () {
+      const modal = document.getElementById('trackingModal');
+      if (modal) modal.style.display = 'none';
+    });
+       // AOS init
+       document.addEventListener("DOMContentLoaded", function () {
+      AOS.init();
+
+      new Swiper(".swiper-container", {
+        loop: true,
+        spaceBetween: 20,
+        slidesPerView: 1.2,
+        centeredSlides: true,
+        breakpoints: {
+          768: { slidesPerView: 2, spaceBetween: 30 },
+          1024: { slidesPerView: 3, spaceBetween: 40 },
+        }
+      });
+
+      const fadeSections = document.querySelectorAll(".fade-in-section");
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      fadeSections.forEach(section => {
+        observer.observe(section);
+      });
+    });
+  </script>
+</body>
+</html>

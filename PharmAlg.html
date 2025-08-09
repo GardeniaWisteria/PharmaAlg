@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PharmAlg - Your Digital Pharmacy</title>
+
+  <!-- CSS Libraries --------------------------------------------------------------------------------------------------------------------->
+  <link rel="stylesheet" href="PharmAlg.css" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Header -------------------------------------------------------------------------------------------------------->
+  <header class="sticky-nav">
+    <nav>
+      <div class="logo">PharmAlg</div>
+      <div class="nav-links">
+        <a href="#home-section">Home</a>
+        <a href="#products-section">Products</a>
+        <a href="#consult-section">Consult</a>
+        <a href="#" id="track-order-link">Track Order</a>
+        <a href="#cart-section" class="cart-icon">
+          <img src="Assets/cart.png" alt="Cart">
+          <span id="cart-count">0</span>
+        </a>
+        <button id="open-login" class="hero-button hero-button-primary">Login</button>
+      </div>
+    </nav>
+  </header>
+
+    
+
+<!-- Hero Section -------------------------------------------------------------------------------------------------------->
+<section id="home-section" class="hero-section fade-in-section">
+    <div class="hero-content" data-aos="fade-right">
+      <h1><span style="background: linear-gradient(to right, #2b6cb0, #38b2ac); -webkit-background-clip: text; color: transparent;">Reimagining Healthcare</span></h1>
+      <p>Order medicines, consult pharmacists, and track prescriptions—digitally.</p>
+  
+    <div class="hero-buttons">
+        <a href="products.html" class="hero-button hero-button-primary">Shop Now</a>
+        <button class="hero-button hero-button-outline" id="openBookingModal" aria-controls="bookingModal" aria-haspopup="dialog">
+          Talk to a Pharmacist
+        </button>
+      </div>
+    </div>
+    <div class="hero-image" data-aos="fade-left">
+      <img src="assets/Pills.png" alt="Pharmacy Graphic" />
+    </div>
+  </section>
+    <!-- Booking Modal -------------------------------------------------------------------------------------------------------->
+    <div id="bookingModal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal" id="closeBookingModal">&times;</span>
+        <h2>Book a Consultation</h2>
+        <form class="booking-form">
+          <label for="bookingName">Name:</label>
+          <input type="text" id="bookingName" name="bookingName" required />
+    
+          <label for="bookingDate">Select Date:</label>
+          <input type="date" id="bookingDate" name="bookingDate" required />
+    
+          <label for="bookingTime">Select Time:</label>
+          <input type="time" id="bookingTime" name="bookingTime" required />
+    
+          <button type="submit">Confirm Booking</button>
+        </form>
+      </div>
+    </div>
+<!-- Featured Products Carousel -------------------------------------------------------------------------------------------------------->
+<section id="products-section" class="products-section fade-in-section" role="region" aria-label="Featured Products">
+  <h1 class="carousel-title" data-aos="fade-up">Our Featured Products</h1>
+
+  <div class="swiper-container" data-aos="fade-up" data-aos-delay="100">
+    <div class="swiper-wrapper">
+      <!-- Product 1 -->
+      <div class="swiper-slide">
+        <div class="product-card">
+          <img src="Assets/Paracetamol.jpg" alt="Paracetamol 500mg" />
+          <h3>Paracetamol 500mg</h3>
+          <p class="product-desc">Pain relief and fever reducer. Trusted and effective.</p>
+          <p class="price"> 150 DA </p>
+          <button class="hero-button hero-button-primary add-to-cart" data-product-id="Paracetamol500">
+            Add to Cart
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="swiper-slide">
+        <div class="product-card">
+          <img src="Assets/Ibuprofen.png" alt="Ibuprofen 400mg" />
+          <h3>Ibuprofen 400mg</h3>
+          <p class="product-desc">Relieves pain, inflammation, and swelling fast.</p>
+          <p class="price"> 220 DA </p>
+          <button class="hero-button hero-button-primary add-to-cart" data-product-id="ibuprofen400">
+            Add to Cart
+          </button>
+        </div>
+      </div>
+
+
+      <!-- Product 3 -->
+      <div class="swiper-slide">
+        <div class="product-card">
+          <img src="Assets/Vitamin C.png" alt="Vitamin C Tablets" />
+          <h3>Vitamin C Tablets</h3>
+          <p class="product-desc">Boost immunity with high-dose vitamin C chewables.</p>
+          <p class="price">300 DA </p>
+          <button class="hero-button hero-button-primary add-to-cart" data-product-id="Vitamin C Tablets">
+            Add to Cart
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="swiper-slide">
+        <div class="product-card">
+          <img src="Assets/Travel Ease.png" alt="Travel Kit" />
+          <h3>Travel Kit</h3>
+          <p class="product-desc">All-in-one travel medicine essentials kit.</p>
+          <p class="price"> 800 DA </p>
+          <button class="hero-button hero-button-primary add-to-cart" data-product-id="Travel Kit">
+            Add to Cart
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+  <!-- Consult Section -------------------------------------------------------------------------------------------------------->
+  <section id="consult-section" class="consult-section fade-in-section" aria-labelledby="consult-heading"> 
+    <div class="consult-container">
+      <h2 id="consult-heading">Consult Our Certified Pharmacists</h2>
+      <p class="intro">
+        Expert care, whenever you need it. Talk to licensed pharmacists through 
+        <strong>live chat</strong>, <strong>scheduled calls</strong>, or <strong>messages</strong>. 
+        Get clear, personalized advice—backed by clinical experience.
+      </p>
+      <div class="pharmacists" role="list" aria-label="Our Pharmacists">
+        <div class="pharmacist-card" role="listitem">
+          <h3>Dr. Sarah, PharmD</h3>
+          <p class="specialty">General Pharmacy</p>
+          <p class="details">✔️ Certified<br> Trusted by 10,000+ patients<br>🇩🇿 Algerian Pharmacy Association</p>
+        </div>
+        <div class="pharmacist-card" role="listitem">
+          <h3>Karim, Clinical Pharmacist</h3>
+          <p class="specialty">Internal Medicine</p>
+          <p class="details">✔️ Patient-Centered<br> Multilingual Support</p>
+        </div>
+        <div class="pharmacist-card" role="listitem">
+          <h3>Lina, Pediatric Pharmacist</h3>
+          <p class="specialty">Infant & Child Care</p>
+          <p class="details"> Gentle advice for young patients</p>
+        </div>
+        <img src="Assets/Certified .png" alt="Certified Badge" width="250" height="250" />
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Order Tracking Modal -------------------------------------------------------------------------------------------------------->
+  <div id="trackingModal" class="modal-overlay fade-in-section" role="dialog" aria-modal="true" aria-labelledby="tracking-heading" style="display: none;">
+    <div class="modal-content">
+      <button class="close-modal" aria-label="Close tracking modal">&times;</button>
+      <h3 id="tracking-heading">  Track Your Order</h3>
+      <p>Enter your Order ID to track your package.</p>
+      <form id="track-order-form" class="tracking-form">
+        <label for="order-id" class="sr-only">Order ID</label>
+        <input type="text" id="order-id" name="order-id" placeholder="Enter Order ID" required />
+        <button type="submit">Track</button>
+      </form>
+      <p id="track-order-result" style="margin-top: 10px; color: #2b6cb0;"></p>
+    </div>
+  </div>
+<!-- Review Section with Auto-Sliding Carousel -------------------------------------------------------------------------------------->
+<section class="reviews-section">
+  <h1>What Our Customers Say</h1>
+  <div class="review-carousel">
+    <div class="review-track">
+      <!-- Repeating cards for infinite loop effect -->
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Great service! Got my prescription delivered fast.</p>
+        <p class="review-author">— Sarah K.</p>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★☆</div>
+        <p class="review-text">Very convenient and easy to use. Will order again!</p>
+        <p class="review-author">— Omar R.</p>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Reliable and professional. Trusted online pharmacy.</p>
+        <p class="review-author">— Lina M.</p>
+      </div>
+
+      <!-- Repeat for smooth loop -->
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Great service! Got my prescription delivered fast.</p>
+        <p class="review-author">— Sarah K.</p>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★☆</div>
+        <p class="review-text">Very convenient and easy to use. Will order again!</p>
+        <p class="review-author">— Omar R.</p>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Reliable and professional. Trusted online pharmacy.</p>
+        <p class="review-author">— Lina M.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+  <!-- Login Modal -------------------------------------------------------------------------------------------------------->
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <span class="close-modal" id="closeLoginModal">&times;</span>
+    <h2>Login</h2>
+    <form class="login-form">
+      <label for="loginEmail">Email:</label>
+      <input type="email" id="loginEmail" name="loginEmail" required />
+
+      <label for="loginPassword">Password:</label>
+      <input type="password" id="loginPassword" name="loginPassword" required />
+
+      <button type="submit">Login</button>
+    </form>
+  </div>
+</div>
+<!-- Footer -------------------------------------------------------------------------------------------------------->
+<footer class="fade-in-section">
+  <div class="footer-content">
+    <p>&copy; 2025 PharmAlg. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="PharmAlg.js"></script>
+</body>
+</html>
